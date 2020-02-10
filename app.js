@@ -32,12 +32,12 @@ mongoose.connect(db, {useNewUrlParser:true}).then(() => {
     console.log(`Database connected successfully ${db}`);
 }).catch(err => console.log(`Unable to connect with Database ${err}`));
 
-// app.get('/', (req, res) => {
-//     return res.send("<h1>Hello</h1>");
-// })
-//Bring in the Users route
 const users = require('./routes/api/users');
 app.use('/api/users', users);
+
+//Bringing the sensors route
+const sensors = require('./routes/api/sensors');
+app.use('/api/sensors', sensors);
 
 const PORT = process.env.PORT || 5000;
 

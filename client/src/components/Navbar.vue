@@ -26,6 +26,9 @@
         <router-link to="/profile" class="nav-link" v-if="isLoggedIn">Profile</router-link>
       </li>
       <li class="nav-item">
+        <router-link to="/sensor" class="nav-link" v-if="isLoggedIn">Sensors</router-link>
+      </li>
+      <li class="nav-item">
         <a to="/logout" class="nav-link" v-if="isLoggedIn">Logout</a>
       </li>
 

@@ -44,9 +44,9 @@ router.post('/data', (req, res) => {
 });
 
 /*
-* @route GET api/sensors/data
+* @route GET api/sensors/display
 * @desc Return the Sensors' data
-* @access Private
+* @access Public
 */
 router.get('/display', passport.authenticate('jwt', {session: false}), (req, res) => {
     return res.json({
